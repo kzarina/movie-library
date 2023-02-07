@@ -1,0 +1,52 @@
+body {
+  background-color: #282828;
+
+  color: white;
+}
+.container {
+  max-width: 968px;
+  margin: 0 auto;
+}
+.navBar {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+#searchBar {
+  width: 50%;
+  height: 40px;
+  margin-right: 2%;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1em;
+}
+#searchBtn {
+  width: 10%;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffbf00;
+}
+#searchBtn:hover {
+  cursor: pointer;
+}
+#movieList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  justify-content: center;
+}
+.movieInfo {
+  margin-bottom: 5%;
+  padding: 5%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px black;
+}
+.movieName {
+  margin-top: 0;
+  color: #ffbf00;
+}
+.movieLanguage {
+  color: #ffbf00;
+}
