@@ -10,6 +10,7 @@ searchBar.addEventListener("keyup", function (event) {
 searchBtn.addEventListener("click", function () {
   movieList.innerHTML = "";
   findMovies(searchTerm);
+  searchBar.value = "";
 });
 
 function findMovies(searchTerm) {
