@@ -19,7 +19,6 @@ function findMovies(searchTerm) {
       return results.json();
     })
     .then((data) => {
-      console.log(data);
       var movies = data.Search;
       for (var movie of movies) {
         var html = `<div class="movieInfo">

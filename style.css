@@ -1,6 +1,5 @@
 body {
   background-color: #282828;
-
   color: white;
 }
 .container {
@@ -49,8 +48,5 @@ body {
   box-shadow: 3px 3px 10px black;
 }
 .movieName {
-  color: #ffbf00;
-}
-.movieLanguage {
   color: #ffbf00;
 }
