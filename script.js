@@ -4,17 +4,16 @@ var movieList = document.getElementById("movieList");
 var searchTerm = null;
 
 searchBar.addEventListener("keyup", function (event) {
-  searchTerm = event.target.value;
-  console.log(searchTerm);
+  searchTerm = event.target.value.trim();
 });
 
 searchBtn.addEventListener("click", function () {
-  console.log("click");
+  movieList.innerHTML = "";
   findMovies(searchTerm);
 });
 
-function findMovies() {
-  fetch("https://www.omdbapi.com/?t=avengers&page=1&apikey=a39e973a")
+function findMovies(searchTerm) {
+  fetch(`https://www.omdbapi.com/?s=${searchTerm}&page=1&apikey=a39e973a`)
     .then((results) => {
       return results.json();
     })
@@ -32,21 +31,3 @@ function findMovies() {
       }
     });
 }
-findMovies();
-
-// http://www.omdbapi.com/?i=tt3896198&apikey=a39e973a
-// var html = `<div class="movieCard">
-//       <div>
-//         <img src="${data.Poster}"/>
-//       </div>
-//       <div>
-//         <p><b>Title:</b> ${data.Title}</p>
-//         <p><b>Released:</b> ${data.Released}</p>
-//         <p><b>Country:</b> ${data.Country}</p>
-//         <p><b>Genre:</b> ${data.Genre}</p>
-//         <p><b>Actors:</b> ${data.Actors}</p>
-//         <p><b>Plot:</b> ${data.Plot}</p>
-//         <p><b>Awards:</b> ${data.Awards}</p>
-//       </div>
-//   </div>`;
-// container.innerHTML += html;
