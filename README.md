@@ -1,1 +1,1 @@
-# simple-website-with-omdb-api
+Live demo: https://kzarina.github.io/movie-app/
